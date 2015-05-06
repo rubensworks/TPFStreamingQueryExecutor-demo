@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <title>TPF Streaming Query Executor</title>
+    <style type="text/css">
+        body {
+            font-size:12px;
+            font-family: Verdana,serif;
+        }
+        #departures {
+            float:left;
+            width:45%;
+            border: 1px solid black;
+            border-collapse: collapse;
+
+            font-size:14px;
+            font-weight: bold;
+            color: yellow;
+            background-color:black;
+            font-family:Courier New,monospace;
+        }
+        #requests {
+            float:right;
+            overflow:scroll;
+            height:400px;
+            width:45%;
+            font-size:8px;
+        }
+
+        .front {
+            font-size:16px;
+            margin:4px;
+        }
+    </style>
+</head>
+<body>
+
+    <span class="front">Last update time: <span id="lastupdate">N/A</span> seconds.</span>
+    <span class="front">Update in: <span id="nextupdate">N/A</span> seconds.</span>
+    <div style="width:45%"><div id="bar" style="width:0%;background-color:blue;height:20px;"></div></div>
+    <div id="requests" />
+    <table id="departures"></table>
+
+
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="tpfs.js"></script>
+</body>
+</html>

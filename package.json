@@ -1,0 +1,25 @@
+{
+    "name": "tpf-streaming-query-executor-demo",
+    "description": "Demo for the TPF Streaming Query Executor",
+    "version": "1.0.0",
+    "main": "browser.js",
+    "bin": {
+    },
+    "scripts": {
+        "docs": "./node_modules/jsdoc/jsdoc.js -c jsdoc.json README.md lib",
+        "test": "./node_modules/mocha/bin/mocha",
+        "hint": "./node_modules/jshint/bin/jshint bin/* lib test",
+        "postinstall": "./node_modules/browserify/bin/cmd.js browser.js -o web/tpfs.js"
+    },
+    "dependencies": {
+        "tpf-streamer": "git://github.com/rubensworks/TPFStreamingQueryExecutor.git#7d6e57d8a45cee9af5befdd724849d9d7e5971b9"
+    },
+    "devDependencies": {
+        "jsdoc": "~3.3.0",
+        "jshint": "~2.1.10",
+        "mocha": "~1.17.1",
+        "sinon": "~1.9.0",
+        "chai": "~1.9.0",
+        "sinon-chai": "~2.5.0"
+    }
+}
