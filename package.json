@@ -9,7 +9,7 @@
         "docs": "./node_modules/jsdoc/jsdoc.js -c jsdoc.json README.md lib",
         "test": "./node_modules/mocha/bin/mocha",
         "hint": "./node_modules/jshint/bin/jshint bin/* lib test",
-        "postinstall": "./node_modules/browserify/bin/cmd.js browser.js -o web/tpfs.js"
+        "postinstall": "browserify -u stream browser.js -o web/tpfs.js"
     },
     "dependencies": {
         "tpf-streamer": "git://github.com/rubensworks/TPFStreamingQueryExecutor.git#7d6e57d8a45cee9af5befdd724849d9d7e5971b9"
